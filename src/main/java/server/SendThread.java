@@ -15,7 +15,7 @@ public class SendThread extends Thread {
     System.out.println("start SendThread on ctx="+ctx);
     for (int i=0;i<10;i++) {
       try {
-        sleep(1000L);
+        sleep(2000L);
         ctx.writeAndFlush("srv>::: hello-msg-"+ i + ":::\n");
       } catch (Exception e) { 
         e.printStackTrace(System.out);
